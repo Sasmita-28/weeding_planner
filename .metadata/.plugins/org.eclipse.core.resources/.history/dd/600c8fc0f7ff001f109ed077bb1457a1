@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+@keyframes letterAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  text-align: center;
+  color: #d8bfd8;
+  opacity: 0;
+  animation: letterAppear 1s forwards;
+}
+
+/* Form Background Styling */
+.hinduForm, .muslimForm, .christianForm, .otherForm {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glassmorphism Form Container */
+form {
+  max-width: 600px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(15px); /* Frosted glass effect */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+/* Label Styling */
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Ensures visibility on blurred background */
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent input */
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+}
+
+/* Submit & Reset Buttons */
+input[type="submit"],
+input[type="reset"] {
+  width: 45%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"] {
+  background: linear-gradient(135deg, #90EE90, #008000);
+  color: white;
+}
+
+input[type="reset"] {
+  background: linear-gradient(135deg, #FF7F7F, #FF0000);
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #008000, #32CD32);
+}
+
+input[type="reset"]:hover {
+  background: linear-gradient(135deg, #FF0000, #B22222);
+}
+
+/* Button Alignment */
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}

@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styling */
+header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff5e6c;
+}
+
+/* Hero Section */
+.hero {
+    background: url('pexels-dzeninalukac-754262.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 200px 20px;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Slight blur effect */
+    backdrop-filter: blur(3px);
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+/* Options Page Styling */
+.option_dign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('options_background.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Option Box */
+.option-box {
+    background: rgba(255, 255, 255, 0.15); /* Light transparent background */
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+/* Option Title */
+.option-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Buttons Container */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Buttons Styling */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #ff5e6c;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #90ee90;
+    text-transform: uppercase;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+/* Sign-in Box */
+.signin-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Sign-in Form */
+.signin-box form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Sign-in Button */
+.signin-box form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff5e6c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signin-box form button:hover {
+    background-color: #ff3c4a;
+}
+
+/* Religion Page */
+.religion {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/21/15/58/wedding-1846114_1280.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes blink {
+    0% { color: purple; }
+    33% { color: pink; }
+    66% { color: white; }
+    100% { color: purple; }
+}
+
+.RELIGION {
+    font-family: 'Segoe Script', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #d8bfd8;
+    animation: blink 2s infinite;
+}
+
+/* Dropdown Menu */
+#selectoption {
+    width: 200px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+#selectoption option {
+    padding: 10px;
+}
+
+#selectoption:focus {
+    outline: none;
+}
+
+/* Next Button */
+button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.next:hover {
+    background-color: #90ee90;
+    text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .option-box {
+        padding: 40px 20px;
+    }
+
+    .option-title {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 150px 20px;
+    }
+}
